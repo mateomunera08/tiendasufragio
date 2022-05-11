@@ -84,10 +84,10 @@ let producto12={
 }
 
 let producto13={
-    nombre:"producto13",
-    precio:500000,
+    nombre:"shampoo keratina",
+    precio:6000,
     estado:true,
-    foto:""
+    foto:"https://firebasestorage.googleapis.com/v0/b/tienda-macheo.appspot.com/o/shampoo%20keratina.png?alt=media&token=a912cba0-0668-4a18-9f0c-8cb73ea7bfbb"
 }
 
 let producto14={
@@ -155,17 +155,40 @@ let productos=Array(
     producto12,
     producto13,
     producto14,
-    producto15
-    producto16
-    producto17
-    producto18
-    producto19
+    producto15,
+    producto16,
+    producto17,
+    producto18,
+    producto19,
     producto20
 
 )
 
+let contenedor=document.getElementById("contenedor")
+
 //RECORRO EL ARREGLO
 productos.forEach(function(producto){
-    console.log(producto.nombre)
+    let foto=document.createElement("img")
+    foto.classList.add("w-100","img-fluid")
+    foto.src=producto.foto
+    let columna=document.createElement("div")
+    columna.classList.add("col")
+
+    let tarjeta=document.createElement("div")
+    tarjeta.classList.add("card")
+    tarjeta.appendChild(foto)
+    columna.appendChild(tarjeta)
+    contenedor.appendChild(columna)
+
+
+
+
+
+
+
+
+
+
+
 })
 
